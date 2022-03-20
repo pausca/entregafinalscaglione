@@ -1,0 +1,553 @@
+
+/*Estilos generales sass*/
+$fondo: rgb(243, 208, 222);
+$trasfondo: #fff;
+
+ /* Nombrar las areas */
+
+header {
+    grid-area: cabeza;
+    padding: 10px;
+}
+
+h2{
+    grid-area: secciones;
+    background-color: $fondo;
+    padding-left: 5px;
+}
+nav {
+    grid-area: menu;
+    background-color: $fondo;
+    padding: 5px;
+}
+
+div{
+    grid-area: descripcion;
+    background-color: $fondo;
+    padding: 5px;
+    }
+
+ul {
+    grid-area: productos;  
+    background-color: $fondo;
+    padding: 10px;   
+    list-style: none;
+}
+
+section{
+    grid-area: imagenes;
+    background-color: $fondo;
+    padding: 10px;
+}
+
+aside {
+    grid-area: flores; 
+    background-color: $fondo;   
+    padding: 10px;
+}
+
+footer {
+    grid-area: pie;
+    background-color:$fondo;
+    padding: 10px;
+    padding-right: 5px;
+}
+
+
+/*RESPONSIVE*/
+
+
+/* DESKTOP */
+@media only screen and (min-width: 1024px){
+    body {
+        height: 100vh;
+        text-align: center;
+        background-color: $fondo;
+    }
+
+    header{
+        background-color: orange;
+    }
+
+
+    table{
+        margin-left: 35%;
+    }
+    /*clases*/
+    .margenTitulo{
+        padding: 80px;
+        margin-top: 1px;
+    }
+
+span:hover {
+    background-color: orange;
+    color: red;
+} 
+
+   /* Articulos de galeria */
+    article {
+    background-color: $fondo;
+    border-radius: 4px;
+    margin: 5px;
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 10px;
+    margin-left: 5rem;
+}
+   /* GRIDS POR AREAS */
+#gridAreas {
+    display: grid;
+       /* grid por areas */
+    grid-template-areas:
+       /* 2 columnas y 6 filas */
+       "menu cabeza"/* fila 1 */
+        "menu secciones"/*fila2*/
+        "menu descripcion"/*fila3*/
+       "menu imagenes"/* fila 4 */
+       "menu productos"/* fila 5 */
+        "pie pie"/*fila 6*/
+    ;
+       /* Dimensiones */
+    grid: template columns 100px;
+    grid-template-rows: 1fr 2fr 2fr 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+span{
+    padding:20px
+}
+
+footer{
+    padding:2px;
+}
+
+.productosNav{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+/*Animaciones*/
+
+.transicion1{
+    background-color: $trasfondo;
+    position:static;
+    padding:10px 10px 5px 10px;
+}
+
+.transicion1:hover{
+    transform: scale(2, 2);
+    z-index:9;
+}
+
+.transicion2{
+    background-color: $trasfondo;
+    position:static;
+    padding:10px 10px 5px 10px;
+}
+
+.transicion2:hover{
+    transform: scale(2, 2);
+    z-index:9;
+}
+
+.transicion3{
+    background-color: $trasfondo;
+    position:static;
+    padding:10px 10px 5px 10px;
+}
+
+.transicion3:hover{
+    transform: scale(2, 2);
+    z-index:9;
+}
+
+.rebote{
+    animation-name: rebote;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    background-color: orange;
+}
+
+@keyframes rebote{
+    0%{
+        border-radius: 1%;
+        transform:skew(50deg);
+    }
+
+    20%{
+
+        transform: rotateY(95deg);
+    
+    }
+
+    30%{
+        transform:translateX(-0.5vw);
+        transform:translateX(0.5vw);
+    }
+
+    70%{
+        transform:translateX(-0.5vw);
+    }
+
+    100%{
+        border-radius: 50%;   
+    }
+}
+
+
+
+}
+    /* MENU FLEX */
+    .flexMenu {
+        display: flex;
+        flex-direction:column;
+        padding-left: 5%;
+        text-align:center;
+    }
+
+    .secciones{
+        margin:0;
+    }
+
+    /* GALERIA FLEX */
+    .productosFlex {
+    display: flex;
+    flex-flow:row nowrap;
+    background-color:$fondo;
+}
+
+.contactoNav{
+    padding-left: 10px;
+    
+}
+
+/* TABLET */
+@media only screen and (min-width: 481px) and (max-width: 1023px){
+    body {
+        height: 100vh;
+        text-align: center;
+        background-color: $fondo;
+    }
+
+    header{
+        background-color: orange;
+    }
+
+    table{
+        margin-left: 35%;
+    }
+/*Clases*/
+    .menuTablet{
+        padding-top: 10px;
+    }
+
+    .introTitulo{
+        margin-top: 30px;
+    }
+
+    .intro{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 15px;
+    }
+
+    .regist{
+    padding-bottom:0.01px;
+    padding-top: 10px;
+    }
+    .contactoNav{
+        padding-left: 10px;
+        
+    }
+span:hover {
+    background-color:orange;
+    color: red;
+} 
+
+   /* Articulos de galeria */
+    article {
+    background-color:$fondo;
+    border-radius: 4px;
+    margin: 5px;
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 10px;
+    margin-left: 5rem;
+}
+   /* GRIDS POR AREAS */
+#gridAreas {
+    display: grid;
+       /* grid por areas */
+    grid-template-areas:
+       /* 2 columnas y 6 filas */
+       "menu cabeza"/* fila 1 */
+        "menu secciones"/*fila2*/
+        "menu descripcion"/*fila3*/
+       "menu imagenes"/* fila 4 */
+       "menu productos"/* fila 5 */
+        "pie pie"/*fila 6*/
+    ;
+       /* Dimensiones */
+    grid-template-rows: 1fr 2fr 2fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+span{
+    padding:20px
+}
+
+footer{
+    padding:2px;
+}
+    /* MENU FLEX */
+    .flexMenu {
+        display: flex;
+        flex-direction:column;
+        padding-left: 15%;
+    }
+
+    .secciones{
+        margin:0;
+    }
+
+    /* GALERIA FLEX */
+    .productosFlex {
+    display: flex;
+    flex-flow:row nowrap;
+    background-color:$fondo;
+}
+}
+
+/*Animaciones*/
+
+.transicion1{
+    background-color: $trasfondo;
+    position:static;
+    padding:10px 10px 5px 10px;
+}
+
+.transicion1:hover{
+    transform: scale(1.5, 1.5);
+    z-index:9;
+}
+
+.transicion2{
+    background-color: $trasfondo;
+    position:static;
+    padding:10px 10px 5px 10px;
+}
+
+.transicion2:hover{
+    transform: scale(1.5, 1.5);
+    z-index:9;
+}
+
+.transicion3{
+    background-color: $trasfondo;
+    position:static;
+    padding:10px 10px 5px 10px;
+}
+
+.transicion3:hover{
+    transform: scale(1.5, 1.5);
+    z-index:9;
+}
+
+h1{
+    animation-name: rebote;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+}
+
+@keyframes rebote{
+    0%{
+        border-radius: 1%;
+        transform:skew(50deg);
+    }
+
+    20%{
+
+        transform: rotateY(95deg);
+    
+    }
+
+    30%{
+        transform:translateX(-0.5vw);
+        transform:translateX(0.5vw);
+    }
+
+    70%{
+        transform:translateX(-0.5vw);
+    }
+
+    100%{
+        border-radius: 50%;   
+    }
+}
+
+/* Smartphone */
+@media only screen and (max-width: 480px){
+    body {
+        height: 100vh;
+        text-align: center;
+
+    }
+
+    header{
+        background-color: orange;
+    }
+
+    table{
+        margin-left: 35%;
+    }
+    aside{
+        padding-left: 1rem;
+        margin:0%
+    }
+
+    /*Animaciones*/
+
+.transicion1{
+    position:static;
+    padding:0;
+}
+
+.transicion1:hover{
+    transform: scale(1.1, 1.1);
+    z-index: 9;
+}
+
+.transicion2{
+    position:static;
+    padding:0;
+}
+
+.transicion2:hover{
+    transform: scale(1.1, 1.1);
+    z-index:9;
+}
+
+.transicion3{
+    position:static;
+    padding:0;
+}
+
+.transicion3:hover{
+    transform: scale(1.1, 1.1);
+    z-index:9;
+}
+
+/*MIXINS*/
+$anchura: 5px;
+$margin:2;
+
+@mixin imagen ($anchura, $margin){
+
+    width:$anchura;
+    margin-left:$margin;
+    background-color: $fondo;
+}
+
+.imagen{
+@include imagen (100px, 1rem);
+background-color: $fondo;
+}
+
+.imagen{
+    @include imagen (100px,1rem);
+    background-color: $fondo;
+
+}
+
+.imagen{
+    @include imagen (100px, 1rem);
+    background-color: $fondo;
+    
+}
+
+
+span:hover {
+    background-color:orange;
+    color: red;
+} 
+
+   /* Articulos de galeria */
+    article {
+    background-color: $fondo;
+    border-radius: 4px;
+    margin: 0rem;
+    text-align: center;
+    font-size: 0.75rem;
+    margin-left: 1rem;
+}
+   /* GRIDS POR AREAS */
+
+#gridAreas {
+    display: grid;
+       /* grid por areas */
+    grid-template-areas:
+    "menu cabeza"/* fila 1 */
+    "menu secciones"/*fila2*/
+    "menu descripcion"/*fila3*/
+    "productos productos"
+    "imagenes imagenes"/* fila 5 */
+    "pie pie"/*fila 6*/
+;
+
+       /* Dimensiones */
+    grid: template columns 100px;
+    grid-template-rows: 1fr 2fr 2fr 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+span{
+    padding:20px
+}
+
+footer{
+    padding:2px;
+}
+    /* MENU FLEX */
+    .flexMenu {
+        display: flex;
+        flex-direction: column;
+        padding-left: 15%;
+    }
+
+    .secciones{
+        margin:0;
+    }
+    /* GALERIA FLEX */
+    .productosFlex {
+        display: flex;
+    flex-flow:column;
+    background-color:$fondo;
+    padding:20px;
+}
+}
+
+.contactoNav{
+    padding-right: 50px;
+    
+}
+.floresTable{
+padding-right:250px;
+background-color:$fondo ;
+}
+.fondu{
+    background-color: $fondo;
+}
+
+.productosNav{
+    padding-right: 50px;
+
+}
+.sinMargen{
+
+    padding: 30px;
+}
+.letras{
+    color:black;
+}
